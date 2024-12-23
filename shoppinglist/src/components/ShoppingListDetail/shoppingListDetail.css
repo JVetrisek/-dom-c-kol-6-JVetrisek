@@ -1,0 +1,334 @@
+.loading {
+  width: 3rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.shopping-list-detail {
+  width: 80%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.shopping-list-title {
+  color: #006cd9;
+  font-weight: bold;
+}
+
+.border-line {
+  border-top: 1px solid #333;
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.2rem 0.7em;
+}
+
+@media (max-width: 1900px) {
+  .item-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1200px) {
+  .item-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .item-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal h2 {
+  margin: 0 0 10px;
+}
+
+.add-member-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.add-member-button i {
+  margin-right: 5px;
+}
+
+h3 {
+  color: #333;
+  font-weight: bold;
+}
+
+p {
+  color: #333;
+}
+
+.add-member-button {
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: white;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+}
+
+label {
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+label input {
+  margin-right: 0.5rem;
+}
+
+.filter-options {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 button {
+  margin-left: 1rem;
+}
+
+.shopping-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .shopping-list-header {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.add-item-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.new-item-input {
+  flex: 1;
+  padding: 5px 15px;
+  font-size: 16px;
+  border: 1px solid #4a7c9e;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+}
+
+.new-item-input:focus {
+  border-color: #006cd9;
+}
+
+.add-item-button {
+  padding: 5px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #006cd9;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-item-button:hover {
+  background-color: #4a7c9e;
+}
+
+.add-item-button:active {
+  background-color: #4a7c9e;
+}
+
+.shopping-list-detail.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.shopping-list-detail.disabled .archive-button {
+  pointer-events: all;
+  opacity: 1;
+  cursor: pointer;
+  background-color: #f3f4f6;
+  border-color: #ccc;
+  color: #333;
+}
+
+.archive-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #f4f6f9;
+  color: #577bbf;
+  border: 2px solid #577bbf;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.archive-button i {
+  margin-right: 8px;
+}
+
+.archive-button:hover {
+  background-color: #577bbf;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.archive-button.active {
+  background-color: #577bbf;
+  color: #fff;
+  border-color: #577bbf;
+}
+
+.archive-button:active {
+  transform: scale(0.98);
+}
+
+.shopping-list-detail.disabled .archive-button {
+  z-index: 20;
+  background-color: #ffffff;
+  border-color: #ff6600;
+  color: #ff6600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.shopping-list-detail.disabled .archive-button:hover {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.shopping-list-detail.disabled .archive-button:active {
+  background-color: #cc5200;
+  transform: scale(1.05);
+}
+
+.shopping-list-detail.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.shopping-list-detail.disabled .archive-button {
+  cursor: pointer;
+}
+
+/* Dark mód */
+.dark .loading {
+  /* Tady můžeš přidat styly pro loading v dark módu */
+}
+
+.dark .shopping-list-detail {
+  background-color: #1f2937;
+  color: white;
+}
+
+.dark .shopping-list-title {
+  color: #93c5fd;
+}
+
+.dark .border-line {
+  border-top: 1px solid #9ca3af;
+}
+
+.dark .add-member-button {
+  color: white;
+  background-color: #374151;
+}
+
+.dark label {
+  color: white;
+  background-color: #374151;
+}
+
+.dark h3 {
+  color: white;
+}
+
+.dark p {
+  color: white;
+}
+
+.dark .new-item-input {
+  background-color: #111827;
+  color: white;
+  border-color: #60a5fa;
+}
+
+.dark .new-item-input:focus {
+  border-color: #3b82f6;
+}
+
+.dark .add-item-button {
+  background-color: #60a5fa;
+}
+
+.dark .add-item-button:hover {
+  background-color: #3b82f6;
+}
+
+.dark .add-item-button:active {
+  background-color: #2563eb;
+}
+
+.dark .shopping-list-detail.disabled .archive-button {
+  background-color: #374151;
+  border-color: #f87171;
+  color: #f87171;
+}
+
+.dark .archive-button {
+  background-color: #374151;
+  color: #60a5fa;
+  border-color: #60a5fa;
+}
+
+.dark .archive-button:hover {
+  background-color: #60a5fa;
+  color: #fff;
+}
+
+.dark .archive-button.active {
+  background-color: #60a5fa;
+  color: #fff;
+}

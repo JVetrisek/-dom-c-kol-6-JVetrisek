@@ -1,0 +1,8 @@
+
+.members-list {
+    color: #333;
+  }
+  
+  .dark .members-list {
+    color: white;
+  }

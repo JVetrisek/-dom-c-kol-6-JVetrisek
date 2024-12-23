@@ -1,0 +1,130 @@
+.header {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333; 
+}
+
+.logo-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.user-section {
+    position: relative;
+}
+
+.user-button {
+    background-color: white;
+    color: #006cd9; 
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.5em 1.3em; 
+    border: none; 
+    border-radius: 20px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.user-button .icon {
+    font-size: 1.2rem;
+    color: #006cd9; 
+    transition: color 0.3s; 
+}
+
+.user-button .user-text {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.user-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    min-width: 150px;
+}
+
+.user-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.user-menu li {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-menu li:hover {
+    background-color: #f2f2f2; 
+}
+
+@media (max-width: 600px) {
+    .user-button .user-text {
+        display: none; 
+    }
+}
+
+.user-button:hover {
+    background-color: #006cd9; 
+    color: white; 
+}
+
+.user-button:hover .icon {
+    color: white;
+}
+
+.userLanguageSwitcherContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Styly pro dark mód */
+.dark .header {
+    background-color: #1f2937; 
+    color: white; 
+}
+
+.dark .logo-button {
+    color: white;
+}
+
+.dark .user-button {
+    background-color: #374151;
+    color: #93c5fd; 
+}
+
+.dark .user-button .icon {
+    color: #93c5fd; 
+}
+
+.dark .user-menu {
+    background-color: #1f2937; 
+    color: white; 
+    border: 1px solid #374151; 
+}
+
+.dark .user-menu li:hover {
+    background-color: #374151;
+}
